@@ -124,7 +124,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               formData.append(_this.field.attribute, _this.value);
               formData.append('_method', 'PUT');
               return _context.abrupt("return", Nova.request().post("/nova-api/".concat(_this.resourceName, "/").concat(_this.resourceId), formData).then(function () {
-                if (_this.field.flash !== 'false') {
+                if (_this.field.flash) {
                   Nova.success("".concat(_this.field.name, " ").concat(_this.field.flash, " ")); //${this.value}
                 }
               }, function (response) {
@@ -309,7 +309,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               formData.append(_this.field.attribute, _this.value);
               formData.append('_method', 'PUT');
               return _context.abrupt("return", Nova.request().post("/nova-api/".concat(_this.resourceName, "/").concat(_this.resourceId), formData).then(function () {
-                Nova.success("".concat(_this.field.name, " ").concat(_this.field.flash, " ")); //${this.value}
+                if (_this.field.flash) {
+                  Nova.success("".concat(_this.field.name, " ").concat(_this.field.flash, " ")); //${this.value}
+                }
               }, function (response) {
                 Nova.error(response);
                 console.log(formData);

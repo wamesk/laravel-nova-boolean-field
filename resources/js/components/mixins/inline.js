@@ -16,7 +16,9 @@ export default {
 
             return Nova.request().post(`/nova-api/${this.resourceName}/${this.resourceId}`, formData)
                 .then(() => {
-                    Nova.success(`${this.field.name} ${this.field.flash} `); //${this.value}
+                    if (this.field.flash) {
+                        Nova.success(`${this.field.name} ${this.field.flash} `); //${this.value}
+                    }
                 }, (response) => {
                     Nova.error(response);
                     console.log(formData)

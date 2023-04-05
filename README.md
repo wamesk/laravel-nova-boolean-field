@@ -21,5 +21,4 @@ You must add to required fields !
 #### Field options
 ``` php
 ->flash('aktualizovaný')
-->flash('false')  // vypnut
 ```
