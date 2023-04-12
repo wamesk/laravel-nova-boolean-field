@@ -1,5 +1,5 @@
 {
-    "name": "wame/index-toggle",
+    "name": "wamesk/laravel-nova-boolean-field",
     "description": "A Laravel Nova field.",
     "keywords": [
         "laravel",
