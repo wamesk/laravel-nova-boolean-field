@@ -5,7 +5,7 @@
 ## Installation
 
 ``` php
-composer require wamesk/laravel-nova-index-toggle
+composer require wamesk/laravel-nova-boolean-field
 ```
 
 ## Usage
