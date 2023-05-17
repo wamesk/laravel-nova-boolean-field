@@ -58,7 +58,7 @@ props: ['resourceName', 'field'],
                     if ( this.field.flash && text.includes("+") ) {
                         Nova.success(`${this.field.name} ${this.field.flash} `); //${this.value}
                     }
-                    if (this.field.flash) {
+                    if (this.field.flash && !text.includes("+")) {
                         Nova.success(`${this.field.flash} `); //${this.value}
                     }
                    
