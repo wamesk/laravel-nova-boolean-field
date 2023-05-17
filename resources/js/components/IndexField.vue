@@ -56,7 +56,7 @@ props: ['resourceName', 'field'],
             return Nova.request().post(`/nova-api/${this.resourceName}/${this.resourceId}`, formData)
                 .then(() => {
                     if ( this.field.flash && text.includes("+") ) {
-                        Nova.success(`${this.field.name} ${this.field.flash} `); //${this.value}
+                        Nova.success(`${this.field.name} ${this.field.flash.replace('+', '')} `); //${this.value}
                     }
                     if (this.field.flash && !text.includes("+")) {
                         Nova.success(`${this.field.flash} `); //${this.value}
